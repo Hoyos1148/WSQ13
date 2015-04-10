@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float Raiz (float n)
+{
+	float Me = 0.00001;
+	float N = n;
+	while((N-n/N)> Me)
+	{
+		N = (N+n/N)/2;
+		cout<<"El resultado aproximado es: "<< N <<endl;
+	}
+}
+
+int main()
+{
+	float n, R;
+	cout<<"Dame un numero"<<endl;
+	cin>>n;
+	R = sqrt(n);
+	cout<<"La raiz cuadrada de ese numero es: "<< R <<endl;
+	Raiz(n);
+	return 0;
+}
